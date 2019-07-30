@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
+
 const routes = require("./Routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -10,7 +11,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist")
+  .then(() => {
+    console.log("Succesfully connected to database.")
+  })
+  .catch((error) => {
+    console.log("There was an error connecting to database:", error)
+  })
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {

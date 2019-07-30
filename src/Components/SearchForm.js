@@ -1,9 +1,12 @@
 import React from 'react';
-import Button from '../Button'
-import './style.css'
+// import Button from '../Components/Button'
+// import './style.css'
 
-SearchForm = (props) => {
+function SearchForm(props) {
+    
+    return(
     <div>
+
         <p className='lead'>Book Search</p>
 
         <label
@@ -13,9 +16,12 @@ SearchForm = (props) => {
         <input name='title'
             placeholder='Search for a book...'
             type='text'></input>
-        <input
+        <button
             onClick={props.handleFormSubmit}
             type='submit'
-            value='Submit'></input>
+            value='Submit'>Submit</button>
     </div>
+    )
 }
+
+export default SearchForm
