@@ -14,12 +14,6 @@ class Saved extends React.Component {
   // items.volumeInfo.imageLinks.thumbnail
 
 
-  // //handleInputChange on search page
-
-  // handleInputChange = event => {
-  //     this.setState({search: event.target.value})
-  // }
-
 
 
   render() {
