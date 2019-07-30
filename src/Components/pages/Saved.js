@@ -1,8 +1,9 @@
+import React from "react";
+import Jumbotron from "../Jumbotron"
+import Navbar from "../Navbar";
 
 
-
-
-
+class Saved extends React.Component {
 
   // //information we need from API
 
@@ -21,3 +22,16 @@
 
 
 
+  render() {
+    return (
+        <div>
+          <Navbar />
+            <Jumbotron />
+        </div>
+    )
+}
+
+
+}
+
+export default Saved;

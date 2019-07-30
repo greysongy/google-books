@@ -1,7 +1,8 @@
 import React from "react";
 import Jumbotron from '../Jumbotron';
 import API from "../../utils/API";
-import SearchForm from "../../Components/SearchForm";
+import SearchForm from "../../Components/SearchForm"
+import Navbar from "../Navbar"
 
 
 class Home extends React.Component {
@@ -30,10 +31,9 @@ handleFormSubmit = event => {
   render() {
       return (
           <div>
+            <Navbar />
               <Jumbotron />
-              <SearchForm 
-              onClick={this.handleFormSubmit}
-              />
+              <SearchForm />
           </div>
       )
   }

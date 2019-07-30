@@ -2,7 +2,7 @@ import React from 'react';
 // import Button from '../Components/Button'
 // import './style.css'
 
-function SearchForm(props) {
+function SearchForm(props){
     
     return(
     <div>
@@ -19,7 +19,7 @@ function SearchForm(props) {
         <button
             onClick={props.handleFormSubmit}
             type='submit'
-            value='Submit'>Submit</button>
+            value='Submit'></button>
     </div>
     )
 }
